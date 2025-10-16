@@ -3,30 +3,85 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Vel Tech College</title>
+    <title>Veltech University Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 350px;
             text-align: center;
-            margin-top: 50px;
-            background-color: #f9f9f9;
         }
-        img.logo {
-            width: 250px;
-            height: auto;
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
         }
-        h1 {
-            margin-top: 20px;
-            color: #004080;
+
+        h2 {
+            color: #004aad;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #004aad;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #003180;
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <img 
-        src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Vel_Tech_Logo.svg/1200px-Vel_Tech_Logo.svg.png" 
-        alt="Vel Tech College Logo" 
-        class="logo" 
-    />
-    <h1>Welcome to Vel Tech College</h1>
+    <div class="login-container">
+        <img
+            src="https://upload.wikimedia.org/wikipedia/en/7/7a/Veltech_University_logo.png"
+            alt="Veltech University Logo"
+            class="logo"
+        />
+        <h2>Veltech University Login</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <button type="submit">Login</button>
+        </form>
+        <div class="footer-text">© 2025 Veltech University</div>
+    </div>
 </body>
 </html>
